@@ -3,7 +3,7 @@
 void InKQ(int B, int A[], int n) {
     printf("B%i: A = { ", B);
     for (int i = 0; i < n - 1; i++) {
-        printf("%i ,", A[i]);
+        printf(" %i,", A[i]);
     }
     printf(" %i}\n", A[n - 1]);
 }
@@ -28,9 +28,9 @@ void selectionSort(int A[], int n) {
     }
     printf("B%i: Mang sau khi sap xep:\n A = {", B);
     for (int i = 0; i < n - 1; i++) {
-        printf("%i ,", A[i]);
+        printf(" %i,", A[i]);
     }
-    printf("%i}\n", A[n - 1]);
+    printf(" %i}\n", A[n - 1]);
 }
 
 int main() {
@@ -39,7 +39,7 @@ int main() {
 
     printf("Ban dau: A ={");
     for (int i = 0; i < n; i++) {
-        printf("%i ,", A[i]);
+        printf(" %i,", A[i]);
     }
     printf(" %i}\n", A[n - 1]);
 
