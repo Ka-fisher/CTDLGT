@@ -26,7 +26,7 @@ void selectionSort(int A[], int n) {
         InKQ(B++, A, n);
 
     }
-    printf("B%i: Mảng sau khi sắp xếp:\n A = {", B);
+    printf("B%i: Mang sau khi sap xep:\n A = {", B);
     for (int i = 0; i < n - 1; i++) {
         printf("%i ,", A[i]);
     }
