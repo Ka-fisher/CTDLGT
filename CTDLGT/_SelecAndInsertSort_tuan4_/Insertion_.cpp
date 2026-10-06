@@ -39,7 +39,7 @@ int main() {
     int A[] = { 23, 57, 13, 25, 121, 87, 36, 13, 204, 111, 89, 59 };
     int n = sizeof(A) / 4;
 
-    printf("Ban đau: A ={");
+    printf("Ban dau: A ={");
     for (int i = 0; i < n; i++) {
         printf(" %i,", A[i]);
     }
