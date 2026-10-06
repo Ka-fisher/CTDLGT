@@ -1,10 +1,11 @@
 #include <stdio.h>
+
 void InKQ(int B, int A[], int n) {
     printf("B%i: A = { ", B);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         printf("%i ,", A[i]);
     }
-    printf(" }\n");
+    printf(" %i}\n", A[n - 1]);
 }
 
 void swap(int* a, int* b) {
@@ -17,35 +18,34 @@ void swap(int* a, int* b) {
 void insertionSort(int A[], int n) {
     int B = 1;
 
-    for (int i = 1; i < n; i++){
+    for (int i = 1; i < n; i++) {
         int j = i;
-        while (j > 0 && A[j-1] > A[j]) {
-            swap(&A[j], &A[j-1]);
+        while (j > 0 && A[j - 1] > A[j]) {
+            swap(&A[j], &A[j - 1]);
             j--;
         }
-        
+
         InKQ(B++, A, n);
     }
-    printf("B%i: Mảng đã được sắp xếp.\n", B);
+
+    printf("B%i: Mảng sau khi sắp xếp:\n A = {",B);
+    for (int i = 0; i < n - 1; i++) {
+        printf("%i ,", A[i]);
+    }
+    printf("%i}\n", A[n - 1]);
 }
 
 int main() {
     int A[] = { 23, 57, 13, 25, 121, 87, 36, 13, 204, 111, 89, 59 };
     int n = sizeof(A) / 4;
 
-    printf("Ban dau: A ={");
+    printf("Ban đầu: A ={");
     for (int i = 0; i < n; i++) {
         printf("%i ,", A[i]);
     }
-    printf("}\n");
+    printf(" %i}\n", A[n - 1]);
 
     insertionSort(A, n);
-
-    printf("Mang sau khi sap xep: A ={");
-    for (int i = 0; i < n; i++) {
-        printf("%i ,", A[i]);
-    }
-    printf("}\n");
 
     return 0;
 }

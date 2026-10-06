@@ -1,10 +1,11 @@
 #include <stdio.h>
-void InKQ (int B, int A[], int n) {
+
+void InKQ(int B, int A[], int n) {
     printf("B%i: A = { ", B);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         printf("%i ,", A[i]);
     }
-    printf(" }\n");
+    printf(" %i}\n", A[n - 1]);
 }
 
 void selectionSort(int A[], int n) {
@@ -23,7 +24,13 @@ void selectionSort(int A[], int n) {
         A[i] = temp;
 
         InKQ(B++, A, n);
+
     }
+    printf("B%i: Mảng sau khi sắp xếp:\n A = {", B);
+    for (int i = 0; i < n - 1; i++) {
+        printf("%i ,", A[i]);
+    }
+    printf("%i}\n", A[n - 1]);
 }
 
 int main() {
@@ -34,15 +41,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%i ,", A[i]);
     }
-    printf("}\n");
+    printf(" %i}\n", A[n - 1]);
 
     selectionSort(A, n);
-
-    printf("Mang sau khi sap xep: A ={");
-    for (int i = 0; i < n; i++) {
-        printf("%i ,", A[i]);
-    }
-    printf("}\n");
 
     return 0;
 }
